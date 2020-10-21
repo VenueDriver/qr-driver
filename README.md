@@ -16,3 +16,27 @@ Sometimes you want some free web site to generate an image quickly for you.  And
     qrdriver.rb help [COMMAND]  # Describe available commands or one specific command
 
     $ ruby qrdriver.rb generate "https://google.com"
+
+# Usage
+
+### Generate a QR code in PNG format
+
+(SVG is the default.)
+
+    $ ruby qrdriver.rb generate "https://example.com/qr" --format png
+
+### Generate a QR code into a different output Folder
+
+    $ ruby qrdriver.rb generate "https://example.com/qr" --output-folder ~/Desktop/
+
+### Generate a QR code and specify the filename
+
+If you want to set the folder, then set it in the filename.
+
+    $ ruby qrdriver.rb generate "https://example.com/qr" --output-filename qr.svg
+
+    $ ruby qrdriver.rb generate "https://example.com/qr" --output-filename ~/Desktop/qr.svg
+
+### Don't open the QR code after generating it
+
+    $ ruby qrdriver.rb generate "https://example.com/qr" --no-open
